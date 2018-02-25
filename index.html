@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Promise Bank App</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+        <h2>Bank App</h2>
+        <button id="accBtn" class="btn btn-primary">Account</button>
+        <button id="addAccBtn" class="btn btn-info">Add Account</button>
+        <button id="editAccBtn" class="btn btn-danger">Edit/Delete</button>
+    </div>
+    <div class="container-fluid">
+      <div id="mainRow" class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="page-header">Accounts</h2>
+          <div class="row">
+            <div class="col col-lg-offset-1">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Deposit</th>
+                    <th>Credit Card</th>
+                  </tr>
+                </thead>
+                <tbody id="mainTbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="formRow" class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="page-header">Add Accounts</h2>
+          <div class="row">
+            <div class="col col-lg-offset-1">
+              <input id="formName" type="text" placeholder="name" class="form-control"><br>
+              <input id="formDeposit"type="text" placeholder="deposit" class="form-control"><br>
+              <input id="formCard" type="text" placeholder="credit card" class="form-control"><br>
+              <button id="formAddBtn" class="btn btn-success form-control">Add Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="deleteRow" class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="page-header">Edit/Delete Account</h2>
+          <div class="row">
+            <div class="col col-lg-offset-1">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Deposit</th>
+                    <th>Credit Card</th>
+                    <th>Edit/Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="deleteTbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="editRow" class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="page-header">Edit Accounts</h2>
+          <div class="row">
+            <div class="col-lg-offset-1">
+              <input id="editId" type="hidden" class="form-control">
+              <input id="editName" type="text" placeholder="name" class="form-control"><br>
+              <input id="editDeposit"type="text" placeholder="deposit" class="form-control"><br>
+              <input id="editCard" type="text" placeholder="credit card" class="form-control"><br>
+              <button id="editAddBtn" class="btn btn-success form-control">Edit Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="DB.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
